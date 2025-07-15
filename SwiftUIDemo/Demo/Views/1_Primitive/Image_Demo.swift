@@ -17,6 +17,7 @@ struct Image_Demo: View {
                 .symbolVariant(.rectangle)
             Image(systemName: "bookmark")
                 .symbolVariant(.slash)
+            Image(systemName: "fan.desk")
         }
     }
 }
@@ -29,4 +30,5 @@ struct Image_Demo: View {
     Image("pencake")
         .resizable()
         .scaledToFit()
+    
 }

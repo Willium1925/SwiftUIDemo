@@ -20,6 +20,7 @@ struct Text_Demo: View {
 
 #Preview("Markdown") {
     Text("Visit **Apple** [website](https://www.apple.com)")
+    Text("Visit **Apple** [website](https://www.apple.com)")
 }
 
 #Preview("Interpolation") {
@@ -39,6 +40,7 @@ struct Text_Demo: View {
     VStack(spacing: 16) {
         let genres = ["action", "comedy", "literature", "music"]
         Text("Genres: \(genres, format: .list(type: .and))")
+        Text("Genres: \(genres, format: .list(type: .or))")
 
         let distance = Measurement(
             value: 25.4, unit: UnitLength.meters
