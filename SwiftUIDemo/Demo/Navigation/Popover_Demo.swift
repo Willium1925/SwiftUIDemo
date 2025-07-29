@@ -2,6 +2,7 @@ import SwiftUI
 
 struct Popover_Demo: View {
     @State private var isShowing = false
+    @State private var isShowingCover = false
 
     var body: some View {
         /// Refer to the examples in ``VStack_Demo``
@@ -11,7 +12,18 @@ struct Popover_Demo: View {
             } label: {
                 Text("Show Popover")
             }
+            Button {
+                isShowing = true
+            } label: {
+                Text("安安")
+            }
+            Button {
+                isShowing = true
+            } label: {
+                Text("你好")
+            }
         }
+        
         .popover(
             isPresented: $isShowing,
             attachmentAnchor: .point(.top),
@@ -21,6 +33,16 @@ struct Popover_Demo: View {
                 .padding()
                 .presentationCompactAdaptation(.none)
         }
+        .fullScreenCover(
+            isPresented: $isShowingCover) {
+                Image(systemName: "star.fill")
+                Button {
+                    isShowingCover = true
+                } label: {
+                    Text("superman")
+                }
+            }
+        
     }
 }
 
