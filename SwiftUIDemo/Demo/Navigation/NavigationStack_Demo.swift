@@ -21,6 +21,7 @@ struct NavigationStack_Demo: View {
 }
 
 /// Navigation Path
+/// 相對常用
 struct NavigationStack_Demo2: View {
     @State private var path: [String] = []
 
