@@ -29,8 +29,8 @@ import SwiftUI
 
 struct StorageComparison: View {
     @State private var temporaryCounter = 0
-    @AppStorage("persistentCounter") private var persistentCounter = 0
-    @SceneStorage("sceneCounter") private var sceneCounter = 0
+    @AppStorage("persistentCounter") private var persistentCounter = 0 // 用這個UI才會即時更新，跟UserDefaults.standard相關
+    @SceneStorage("sceneCounter") private var sceneCounter = 0 // 僅保存在當下場景，目前很不穩，不建議使用
     
     var body: some View {
         NavigationStack {

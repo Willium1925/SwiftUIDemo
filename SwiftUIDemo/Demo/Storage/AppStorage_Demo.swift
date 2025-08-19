@@ -19,6 +19,7 @@ import SwiftUI
 struct AppStorageBasics: View {
     @AppStorage("username") private var username = ""
     @AppStorage("age") private var age = 18
+    @State private var solidAge = 18
     @AppStorage("isNotificationsEnabled") private var isNotificationsEnabled = true
     @AppStorage("favoriteColor") private var favoriteColor = "Blue"
     @AppStorage("volume") private var volume = 0.5
@@ -34,6 +35,7 @@ struct AppStorageBasics: View {
                     
                     // Int with Stepper
                     Stepper("Age: \(age)", value: $age, in: 0...120)
+                    Stepper("SolidAge: \(solidAge)", value: $solidAge, in: 0...120)
                     
                     // Bool with Toggle
                     Toggle("Enable Notifications", isOn: $isNotificationsEnabled)

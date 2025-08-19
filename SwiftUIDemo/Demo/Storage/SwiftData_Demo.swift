@@ -23,7 +23,7 @@ import SwiftData
 
 // MARK: - Data Models
 
-@Model
+@Model // 有這註解，他會自動執行持久相關資料處理
 class Book {
     var title: String
     var author: String
@@ -102,6 +102,7 @@ struct SwiftDataDemo: View {
     }
 }
 
+// 顯示
 struct BookLibraryApp: View {
     @Query private var books: [Book]
     @Environment(\.modelContext) private var modelContext
